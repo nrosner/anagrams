@@ -19993,7 +19993,7 @@
                 }
                 
                 // Try pairs of additional words (limited for performance)
-                const shortWords = availableWords.filter(w => w.length <= 4).slice(0, 20);
+                const shortWords = availableWords.filter(w => w.length <= 8).slice(0, 50);
                 for (let i = 0; i < shortWords.length; i++) {
                     for (let j = i; j < shortWords.length; j++) {
                         const word1 = shortWords[i];

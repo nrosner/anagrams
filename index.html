@@ -5040,7 +5040,7 @@
             'harbor',
             'hungary',
             'traveler',
-            'urw',
+
             'segment',
             'realize',
             'regardless',
@@ -5660,7 +5660,7 @@
             'temp',
             'intro',
             'mercedes',
-            'zus',
+
             'assurance',
             'fisting',
             'clerk',
@@ -7464,7 +7464,7 @@
             'tires',
             'logs',
             'undertaken',
-            'tgp',
+
             'hazard',
             'retro',
             'leo',
@@ -9827,7 +9827,7 @@
             'forge',
             'commissioners',
             'dense',
-            'dts',
+
             'brave',
             'forwarding',
             'awful',
@@ -11369,7 +11369,7 @@
             'bamboo',
             'denotes',
             'communicating',
-            'sgh',
+
             'vectors',
             'decks',
             'craigslist',
@@ -12065,7 +12065,7 @@
             'hen',
             'homeowner',
             'ancestry',
-            'mib',
+
             'dolphins',
             'adopting',
             'landed',
@@ -12742,7 +12742,7 @@
             'canopy',
             'gloss',
             'panda',
-            'crc',
+
             'whip',
             'symbian',
             'porch',
@@ -15904,7 +15904,7 @@
             'mast',
             'travelocity',
             'unfinished',
-            'fno',
+
             'goth',
             'cared',
             'affection',
@@ -16671,7 +16671,7 @@
             'lulu',
             'windy',
             'brennan',
-            'kpx',
+
             'punished',
             'saturation',
             'stamford',
@@ -17095,7 +17095,7 @@
             'sarbanes',
             'alcoholism',
             'dissent',
-            'bdd',
+
             'csc',
             'maximal',
             'daly',
@@ -17119,7 +17119,7 @@
             'clicked',
             'ineffective',
             'scorecard',
-            'gln',
+
             'beirut',
             'drawers',
             'byrne',
@@ -17192,7 +17192,7 @@
             'poetic',
             'abnormalities',
             'mortar',
-            'qtr',
+
             'blamed',
             'rae',
             'recommending',
@@ -17223,7 +17223,7 @@
             'scar',
             'indictment',
             'apology',
-            'wmd',
+
             'pms',
             'raped',
             'collars',
@@ -19460,7 +19460,7 @@
             'mclaren',
             'wyatt',
             'rowling',
-            'vhf',
+
             'flatbed',
             'spades',
             'slug',
@@ -20050,7 +20050,7 @@
             // Find words with anagrams (main function)
             async findWordsWithAnagrams() {
                 const originalInput = document.getElementById('originalInput');
-                const original = originalInput.value.trim();
+                const original = originalInput.value.trim().replace(/\s+/g, '').toLowerCase();
                 
                 if (!original) {
                     alert('Please enter some letters');
@@ -20125,6 +20125,10 @@
                 document.getElementById('progressFill').style.width = `${percent}%`;
                 document.getElementById('progressText').textContent = 
                     `Processing... ${percent}% (${current}/${total} subwords checked, ${found} subwords with anagrams found)`;
+                
+                // Update the wordsCount badge incrementally
+                const wordsCount = document.getElementById('wordsCount');
+                wordsCount.textContent = found;
             }
 
             clearWordsBox() {
